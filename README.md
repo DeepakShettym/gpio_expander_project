@@ -2,7 +2,9 @@
 GPIO Expander-based LED and Solenoid Control using I2C.
 
 GPIO Expander LED & Solenoid Control
-This project provides implementations for controlling LEDs and solenoids using a GPIO expander over I2C. It includes:
+This project provides implementations for controlling LEDs and solenoids using a GPIO expander over I2C. 
+
+It includes:
 
 GPIO Expander LED Control: Enables LED toggling, brightness adjustment, and status checking.
 
