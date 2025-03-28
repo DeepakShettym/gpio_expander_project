@@ -1,0 +1,1532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sample_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/jvm_init"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JVM Init" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/sys_init"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sys Init" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/sys_dinit"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sys Dinit" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/solenoid_1_turn_on"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sol 1 ON" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/solenoid_1_turn_off"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sol 1 Off" />
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/pwm_turn_on"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PWM ON" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/pwm_turn_off"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PWM Off" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/rgb_led_ch_on"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RGB ON" />
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/rgb_led_ch_off"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LED Off" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="LED Switch"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/turn_led_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LED ON" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/turn_led_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:maxLength="9"
+                        android:text="LED OFF" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Enable/Disable LED Channel(Cha, Val)"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp" />
+
+
+
+                    <EditText
+                        android:id="@+id/set_led_channel_number"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="0dp"
+                        android:autofillHints="000"
+                        android:hint="C"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+
+                    <EditText
+                        android:id="@+id/set_led_channel_number_value"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:autofillHints="000"
+                        android:hint="V"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="LED Driver Output"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/turn_led_drive_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DRV ON" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/turn_led_drive_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:maxLength="9"
+                        android:text="DRV OFF" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Set LED Intensity"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_intensity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/set_led_intensity_value"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:hint="00"
+                        android:inputType="text"
+                        android:maxLength="2"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Get LED Channel"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_channel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp" />
+
+
+                    <EditText
+                        android:id="@+id/set_led_channel_status"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="0dp"
+                        android:autofillHints="000"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/set_led_channel_status_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="0dp"
+                        android:autofillHints="000"
+                        android:hint="Val: 0"
+                        android:inputType="text"
+                        android:maxLength="7"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="GET LED Intensity"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_intensity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/get_led_intensity_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="0000000"
+                        android:inputType="text"
+                        android:maxLength="8"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="LED Output Status"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_output_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/get_led_status_value"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:hint="0"
+                        android:inputType="text"
+                        android:maxLength="9"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Channel 1 Brightness"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_intensity_c1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/set_led_intensity_value_c1"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:hint="00"
+                        android:inputType="text"
+                        android:maxLength="4"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Channel 2 Brightness"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_intensity_c2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/set_led_intensity_value_c2"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:hint="00"
+                        android:inputType="text"
+                        android:maxLength="4"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Channel 3 Brightness"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_intensity_c3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/set_led_intensity_value_c3"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:hint="00"
+                        android:inputType="text"
+                        android:maxLength="4"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Channel 4 Brightness"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_intensity_c4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/set_led_intensity_value_c4"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:hint="00"
+                        android:inputType="text"
+                        android:maxLength="4"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="GET LED Brightness C1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_intensityc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/get_led_intensity_valuec1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="0000000"
+                        android:inputType="text"
+                        android:maxLength="8"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="GET LED Brightness C2"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_intensityc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/get_led_intensity_valuec2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="0000000"
+                        android:inputType="text"
+                        android:maxLength="8"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="GET LED Brightness C3"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_intensityc3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/get_led_intensity_valuec3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="0000000"
+                        android:inputType="text"
+                        android:maxLength="8"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="GET LED Brightness C4"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_intensityc4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET(0x)" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/get_led_intensity_valuec4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="000"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="0000000"
+                        android:inputType="text"
+                        android:maxLength="8"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Get LED Register"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_get_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GET" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp" />
+
+
+                        <EditText
+                            android:id="@+id/get_led_register_status"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="0dp"
+                            android:autofillHints="000"
+                            android:hint="0"
+                            android:inputType="text"
+                            android:maxLength="2"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="0dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/get_led_register_status_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="0dp"
+                            android:autofillHints="000"
+                            android:hint="Val: 0"
+                            android:inputType="text"
+                            android:maxLength="7"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background4"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Set LED Register"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:background="@drawable/background4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/led_set_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set(0x)" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="0dp" />
+
+
+                        <EditText
+                            android:id="@+id/set_led_register_address"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="0dp"
+                            android:autofillHints="000"
+                            android:hint="0"
+                            android:inputType="text"
+                            android:maxLength="2"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="0dp" />
+
+                        <EditText
+                            android:id="@+id/set_led_register_status_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="0dp"
+                            android:autofillHints="000"
+                            android:hint="0"
+                            android:inputType="text"
+                            android:maxLength="7"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
